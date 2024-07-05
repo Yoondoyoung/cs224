@@ -38,9 +38,6 @@ FILE *parseCommandLine(int argc, char **argv, int *isGrayscale, int*isScaleDown)
 
     } else if (strcmp(argv[1], "-s") == 0) {
       // set isscale here
-      *isGrayscale = FALSE;
-
-    }else if (strcmp(argv[1], "-d") == 0) {
       *isScaleDown = TRUE;
 
     }else {
