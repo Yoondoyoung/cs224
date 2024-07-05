@@ -5,28 +5,6 @@
 int hex = 16;
 int binary = 6;
 
-void printDataAsBinary(unsigned char *data, size_t size) {
-  for (int i = 0; i < binary; i++) {
-    printf(" ");
-
-    if (i < (int)size) {
-      char byteString[8];
-      unsigned char currentChar = *(data + i);
-
-      for (int i = 7; i >= 0; i--) {
-        byteString[i] = currentChar % 2 == 1 ? '1' : '0';
-        currentChar /= 2;
-      }
-
-      printf("%s", byteString);
-    } else {
-      // 8 spaces where a byte would go
-      printf("%*c", 8, ' ');
-    }
-  }
-}
-
-
 
 /**
  * Parses the command line.
@@ -109,6 +87,31 @@ void readAndPrintInputAsHex(FILE *input) {
     printDataAsChars(data, numBytesRead);
     printf("\n");
     numBytesRead = fread(data, 1, hex, input);
+  }
+}
+/**
+ *
+ * Printing data as binary 
+ * 
+ **/
+void printDataAsBinary(unsigned char *data, size_t size) {
+  for (int i = 0; i < binary; i++) {
+    printf(" ");
+
+    if (i < (int)size) {
+      char byteString[8];
+      unsigned char currentChar = *(data + i);
+
+      for (int i = 7; i >= 0; i--) {
+        byteString[i] = currentChar % 2 == 1 ? '1' : '0';
+        currentChar /= 2;
+      }
+
+      printf("%s", byteString);
+    } else {
+      // 8 spaces where a byte would go
+      printf("%*c", 8, ' ');
+    }
   }
 }
 

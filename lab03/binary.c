@@ -4,7 +4,7 @@ int main()
 {
 
     // This is our char being converted
-    unsigned char c = 'p';
+    unsigned char c = 255;
 
     // You'll also need an array to store the bit string,
     int arr[8];
