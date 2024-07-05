@@ -1,0 +1,18 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     a.out
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _parseCommandLine, symObjAddr: 0x0, symBinAddr: 0x100003578, symSize: 0x190 }
+  - { offsetInCU: 0x5A, offset: 0x5A, size: 0x8, addend: 0x0, symName: _parseCommandLine, symObjAddr: 0x0, symBinAddr: 0x100003578, symSize: 0x190 }
+  - { offsetInCU: 0xAC, offset: 0xAC, size: 0x8, addend: 0x0, symName: _getFileSizeInBytes, symObjAddr: 0x190, symBinAddr: 0x100003708, symSize: 0x64 }
+  - { offsetInCU: 0xE2, offset: 0xE2, size: 0x8, addend: 0x0, symName: _getBmpFileAsBytes, symObjAddr: 0x1F4, symBinAddr: 0x10000376C, symSize: 0x5C }
+  - { offsetInCU: 0x122, offset: 0x122, size: 0x8, addend: 0x0, symName: _scaleDownPixelArray, symObjAddr: 0x250, symBinAddr: 0x1000037C8, symSize: 0x23C }
+  - { offsetInCU: 0x244, offset: 0x244, size: 0x8, addend: 0x0, symName: _getAverageIntensity, symObjAddr: 0x48C, symBinAddr: 0x100003A04, symSize: 0x3C }
+  - { offsetInCU: 0x296, offset: 0x296, size: 0x8, addend: 0x0, symName: _applyGrayscaleToPixel, symObjAddr: 0x4C8, symBinAddr: 0x100003A40, symSize: 0x58 }
+  - { offsetInCU: 0x2C8, offset: 0x2C8, size: 0x8, addend: 0x0, symName: _applyThresholdToPixel, symObjAddr: 0x520, symBinAddr: 0x100003A98, symSize: 0x74 }
+  - { offsetInCU: 0x2FA, offset: 0x2FA, size: 0x8, addend: 0x0, symName: _applyFilterToPixel, symObjAddr: 0x594, symBinAddr: 0x100003B0C, symSize: 0x4C }
+  - { offsetInCU: 0x32C, offset: 0x32C, size: 0x8, addend: 0x0, symName: _applyFilterToRow, symObjAddr: 0x5E0, symBinAddr: 0x100003B58, symSize: 0x74 }
+  - { offsetInCU: 0x388, offset: 0x388, size: 0x8, addend: 0x0, symName: _applyFilterToPixelArray, symObjAddr: 0x654, symBinAddr: 0x100003BCC, symSize: 0xBC }
+  - { offsetInCU: 0x400, offset: 0x400, size: 0x8, addend: 0x0, symName: _parseHeaderAndApplyFilter, symObjAddr: 0x710, symBinAddr: 0x100003C88, symSize: 0x138 }
+  - { offsetInCU: 0x4BE, offset: 0x4BE, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x848, symBinAddr: 0x100003DC0, symSize: 0x124 }
+...
