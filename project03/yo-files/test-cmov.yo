@@ -1,0 +1,35 @@
+# Set up the initial values
+0x0000:                        | main:
+0x0000: 30f40001000000000000   |   irmovq stack, %rsp
+0x000a: 30f70000000000000000   |   irmovq $0, %rdi
+0x0014: 30f60100000000000000   |   irmovq $1, %rsi
+0x001e: 30f60200000000000000   |   irmovq $2, %rdx
+0x0028: 30f60300000000000000   |   irmovq $3, %rbx
+0x0032: 30fa0400000000000000   |   irmovq $4, %r10
+0x003c: 30fa0500000000000000   |   irmovq $5, %r11
+
+# Perform cmovle (Less or equal)
+0x0046: 6060                   |   cmovle %rsi, %rax
+0x0048: 2070                   |   rrmovq %rdi, %rax
+
+# Set flags for conditional moves
+0x004a: 6160                   |   subq %rsi, %rax   # ZF=0, SF=0, OF=0
+
+# Perform cmovl (Less)
+0x004c: 6020                   |   cmovl %rsi, %rax  # Should not move, rax remains 0
+
+# Perform cmove (Equal)
+0x004e: 6030                   |   cmove %rsi, %rax  # Should move, rax = rsi
+
+# Perform cmovne (Not equal)
+0x0050: 6040                   |   cmovne %rsi, %rax # Should move, rax = rsi
+
+# Perform cmovge (Greater or equal)
+0x0052: 6050                   |   cmovge %rsi, %rax # Should not move, rax remains 1
+
+# Perform cmovg (Greater)
+0x0054: 6060                   |   cmovg %rsi, %rax  # Should not move, rax remains 1
+
+0x0056: 00                     |   halt
+
+0x0100:                        | stack:
